@@ -1,4 +1,4 @@
-const testString = "Hello, World!";
+const testString = 'Hello, World!';
 console.log(testString);
 
 const testNumber = 55;

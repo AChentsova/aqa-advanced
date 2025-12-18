@@ -1,7 +1,7 @@
-const firstName = "Anna";
-const secondName = "Oleh";
+const firstName = 'Anna';
+const secondName = 'Oleh';
 
-const greetingСoncatenation = "Hi, " + firstName + " and " + secondName;
+const greetingСoncatenation = 'Hi, ' + firstName + ' and ' + secondName;
 console.log(greetingСoncatenation);
 
 const greetingTemplateLiteral = `Hi, ${firstName} and ${secondName}`;

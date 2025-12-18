@@ -1,29 +1,29 @@
 async function getTodo() {
-    try {
-        const response = await fetch('https://jsonplaceholder.typicode.com/todos/1');
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
-        const data = await response.json();
-        return data;
-    } catch (error) {
-        console.error('Error fetching todo:', error);
-        throw error;
-    }
+	try {
+		const response = await fetch('https://jsonplaceholder.typicode.com/todos/1');
+		if (!response.ok) {
+			throw new Error('Network response was not ok');
+		}
+		const data = await response.json();
+		return data;
+	} catch (error) {
+		console.error('Error fetching todo:', error);
+		throw error;
+	}
 }
 
 async function getUser() {
-    try {
-        const response = await fetch('https://jsonplaceholder.typicode.com/users/1');
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
-        const data = await response.json();
-        return data;
-    } catch (error) {
-        console.error('Error fetching User:', error);
-        throw error;
-    }
+	try {
+		const response = await fetch('https://jsonplaceholder.typicode.com/users/1');
+		if (!response.ok) {
+			throw new Error('Network response was not ok');
+		}
+		const data = await response.json();
+		return data;
+	} catch (error) {
+		console.error('Error fetching User:', error);
+		throw error;
+	}
 }
 
 const promises = [getTodo(), getUser()];
@@ -32,13 +32,12 @@ const promiseAll = Promise.all(promises);
 const promiseRace = Promise.race(promises);
 
 promiseAll.then(([fetchedTodo, fetchedUser]) => {
-    console.log('Promise.all result:');
-    console.log('Todo:', fetchedTodo);
-    console.log('User:', fetchedUser);
+	console.log('Promise.all result:');
+	console.log('Todo:', fetchedTodo);
+	console.log('User:', fetchedUser);
 });
 
-promiseRace.then(firstResolved => {
-    console.log('Promise.race result:');
-    console.log(firstResolved);
+promiseRace.then((firstResolved) => {
+	console.log('Promise.race result:');
+	console.log(firstResolved);
 });
-
