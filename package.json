@@ -22,6 +22,9 @@
 	"main": "index.js",
 	"scripts": {
 		"test": "jest",
+		"test:task1": "jest task1.test.js",
+		"test:task2": "jest task2.test.js",
+		"test:task3": "jest task3.test.js",
 		"format": "prettier . --write",
 		"lint": "npx eslint --fix .",
 		"prepare": "husky"
